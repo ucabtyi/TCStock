@@ -11,3 +11,7 @@ def mkdir_p(path):
             pass
         else:
             raise
+
+
+def get_df_index_by_col_value(df, key, value):
+    return df.loc[df[key]==value].index

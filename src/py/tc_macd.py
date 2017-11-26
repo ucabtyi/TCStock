@@ -23,11 +23,11 @@ def get_macd(df, fast, slow, signal):
 
 
 def jincha(df, key, value):
-    return df.loc[df.loc[df[key]==value].index][config.macd_positon_key] == config.jincha
+    return (df.loc[df.loc[df[key]==value].index][config.macd_positon_key] == config.jincha).values[0]
 
 
 def sicha(df, key, value):
-    return df.loc[df.loc[df[key]==value].index][config.macd_positon_key] == config.sicha
+    return (df.loc[df.loc[df[key]==value].index][config.macd_positon_key] == config.sicha).values[0]
 
 
 def fast_gt_0():
